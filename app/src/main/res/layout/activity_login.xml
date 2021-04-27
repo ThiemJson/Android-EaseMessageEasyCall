@@ -4,72 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f2f2"
     tools:context=".Login">
 
-    <ImageView
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_marginTop="60dp"
         android:id="@+id/imageView"
-        android:layout_width="169dp"
-        android:layout_height="162dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/facebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoapp" />
+        app:civ_border_width="7dp"
+        app:civ_border_color="#ffffff"/>
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="Easy Message | Easy Call"
+        android:layout_marginTop="28dp"
+        android:text="EASY MESSAGE | EASY CALL"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="305dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="60dp"
+        android:id="@+id/linearFirebase"
+        android:layout_width="303dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="100dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:shadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:onClick="loginWithFirebase">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/firebaseLogin"
             android:layout_width="147dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:src="@drawable/firebase"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#f7c52b"/>
 
         <TextView
-            android:layout_weight="5"
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#f7c52b"
             android:gravity="center"
-            android:text="Login with Firebase" />
+            android:text="Firebase"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="305dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="303dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="250dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearFirebase"
+        android:onClick="loginWithFacebook">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/facebookLogin"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:src="@drawable/facebook"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ffffff"
+            />
 
         <TextView
             android:layout_weight="5"
@@ -77,26 +101,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Login with Facebook" />
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="#0873e3"
+            android:textColor="@color/white"
+            android:text="Facebook" />
     </LinearLayout>
 
-
     <LinearLayout
-        android:layout_width="305dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="100dp"
+        android:id="@+id/linearGoogle"
+        android:layout_width="303dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="250dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:onClick="loginWithGoogle">
 
-        <ImageView
-            android:id="@+id/gmailLogin"
-            android:layout_width="148dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/googleLogin"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:src="@drawable/google"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#e34033"/>
 
         <TextView
             android:layout_weight="5"
@@ -104,7 +136,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Login with Google" />
-    </LinearLayout>
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="#e34033"
+            android:textColor="@color/white"
+            android:text="Google" />
+    </LinearLayout>p
 
+    <TextView
+        android:id="@+id/owered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by: ThiemJason"
+        android:layout_marginBottom="40dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
