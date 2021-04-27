@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "819912330349",
+    "project_id": "easymessageeasycall",
+    "storage_bucket": "easymessageeasycall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819912330349:android:1b6badf9e4f940bee98364",
+        "android_client_info": {
+          "package_name": "teneocto.thiemjason.easymessageeasycall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819912330349-bacv3v4cm3q89orbetbjeiufupobbj02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "teneocto.thiemjason.easymessageeasycall",
+            "certificate_hash": "7748f2f59d3bd9c359216a21cfa02517c16ff332"
+          }
+        },
+        {
+          "client_id": "819912330349-e4gjrush8554ur2citqtts0f42gqt30l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlLGqWny2hfDDGlvYxB2EQQT0k0z0y-TU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819912330349-e4gjrush8554ur2citqtts0f42gqt30l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
