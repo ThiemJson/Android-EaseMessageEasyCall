@@ -1,15 +1,14 @@
-package teneocto.thiemjason.easymessageeasycall;
+package teneocto.thiemjason.easymessageeasycall.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.TabHost;
+
+import teneocto.thiemjason.easymessageeasycall.R;
+import teneocto.thiemjason.easymessageeasycall.login.loginFirebase.FirebaseLogin;
 
 public class Login extends AppCompatActivity {
 
