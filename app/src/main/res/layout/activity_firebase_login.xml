@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/firebaseLoginEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -51,11 +51,11 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintStart_toStartOf="@+id/firebaseLoginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/firebaseLoginEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/firebaseLoginPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

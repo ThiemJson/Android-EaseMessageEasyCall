@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyMessageEasyCall">
-        <activity android:name=".login.loginFirebase.FirebaseForgotPassword"></activity>
+        <activity android:name=".home.Home"></activity>
+        <activity android:name=".videocall.VideoCallView" />
+        <activity android:name=".login.loginFirebase.FirebaseForgotPassword" />
         <activity android:name=".login.loginFirebase.FirebaseRegister" />
         <activity android:name=".login.loginFirebase.FirebaseLogin" />
         <activity android:name=".login.Login" />

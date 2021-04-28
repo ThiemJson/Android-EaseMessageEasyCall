@@ -7,21 +7,35 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import teneocto.thiemjason.easymessageeasycall.R;
 
 public class FirebaseLogin extends AppCompatActivity {
+    EditText inputEmail;
+    EditText inputPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase_login);
 
+       activityInitial();
+    }
+
+    /**
+     * All config here
+     */
+    public void activityInitial() {
         // Hide tab bar
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().hide();
 
         findViewById(R.id.loginButton).setBackgroundColor(Color.parseColor("#0873e3"));
+
+        this.inputEmail = findViewById(R.id.editTextTextEmailAddress);
+        this.inputPass = findViewById(R.id.editTextTextPassword);
     }
 
     /**
