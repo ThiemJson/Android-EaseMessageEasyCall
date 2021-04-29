@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -40,17 +41,11 @@ public class FirebaseUIActivity extends AppCompatActivity {
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(providers)
+                        .setTheme(R.style.Theme_EasyMessageEasyCall)
+                        .setLogo(R.mipmap.ic_launcher)
+                        .setLockOrientation(true)
                         .build(),
                 RC_SIGN_IN);
-
-//        startActivityForResult(
-//                AuthUI.getInstance()
-//                        .createSignInIntentBuilder()
-//                        .setAvailableProviders(providers)
-//                        .setLogo(R.drawable.my_great_logo)      // Set logo drawable
-//                        .setTheme(R.style.MySuperAppTheme)      // Set theme
-//                        .build(),
-//                RC_SIGN_IN);
     }
 
     /**
@@ -90,8 +85,14 @@ public class FirebaseUIActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 // Successfully signed in
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                Log.i("Login Successful", user.getEmail());
+                Log.i("Login Successful", user.getDisplayName());
+                Log.i("Login Successful", user.getUid());
                 // ...
             } else {
+
+                Log.i("Login failure", "fail");
                 // Sign in failed. If response is null the user canceled the
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
