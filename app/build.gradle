@@ -45,5 +45,6 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
     implementation 'com.facebook.android:facebook-core:8.1.0'
     implementation 'com.facebook.android:facebook-android-sdk:8.1.0'
+    implementation 'com.github.agorabuilder:native-full-sdk:3.4.1'
     implementation 'com.android.support:multidex:1.2.2'
 }

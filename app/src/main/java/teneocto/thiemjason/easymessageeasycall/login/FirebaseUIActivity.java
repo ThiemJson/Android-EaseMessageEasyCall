@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import teneocto.thiemjason.easymessageeasycall.R;
+import teneocto.thiemjason.easymessageeasycall.videocall.VideoCallView;
 
 public class FirebaseUIActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 9001;
@@ -89,6 +90,9 @@ public class FirebaseUIActivity extends AppCompatActivity {
                 Log.i("Login Successful", user.getEmail());
                 Log.i("Login Successful", user.getDisplayName());
                 Log.i("Login Successful", user.getUid());
+
+                Intent gotoVideocallview = new Intent(getApplicationContext(), VideoCallView.class);
+                startActivity(gotoVideocallview);
                 // ...
             } else {
 
