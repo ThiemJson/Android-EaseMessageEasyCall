@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import teneocto.thiemjason.easymessageeasycall.R;
+import teneocto.thiemjason.easymessageeasycall.home.Home;
 
 public class FirebaseUIActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 9001;
@@ -74,7 +75,6 @@ public class FirebaseUIActivity extends AppCompatActivity {
                     }
                 });
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -89,6 +89,10 @@ public class FirebaseUIActivity extends AppCompatActivity {
                 Log.i("Login Successful", user.getEmail());
                 Log.i("Login Successful", user.getDisplayName());
                 Log.i("Login Successful", user.getUid());
+
+                Intent homeView = new Intent(getApplicationContext(), Home.class);
+                startActivity(homeView);
+                finish();
                 // ...
             } else {
 
